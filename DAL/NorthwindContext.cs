@@ -12,7 +12,7 @@ namespace NorthwindExercise.DAL
     {
         public NorthwindContext() : base("NorthwindDB")
         {
-            //Database.SetInitializer(new NorthwindInitializer());
+            Database.SetInitializer(new NorthwindInitializer());
         }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
