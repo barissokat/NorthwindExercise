@@ -4,12 +4,19 @@
 
 <div class="col-sm-3 col-md-2 sidebar">
     <ul class="nav nav-sidebar">
-        <li class="active"><a href="#">List <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Create</a></li>
-        <li><a href="#">Delete</a></li>
-        <li><a href="#">Details</a></li>
+        <li class="active">@Html.ActionLink("List", "Index")<span class="sr-only">(current)</span></li>
+        <li>@Html.ActionLink("Create New", "Create")</li>
+        <li>@Html.ActionLink("Edit", "Edit")</li>
+        <li>@Html.ActionLink("Details", "Details")</li>
+        <li>@Html.ActionLink("Delete", "Delete")</li>
     </ul>
 </div>
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     @RenderBody()
 </div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+<script src="~/Scripts/holder.min.js"></script>
+<script src="~/Scripts/npm.js"></script>
+@RenderSection("scripts", required: false)
