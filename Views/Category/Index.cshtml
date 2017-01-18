@@ -4,14 +4,13 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutAdminLeft.cshtml";
 }
-
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<table class="table" id="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryID)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.CategoryName)
         </th>
@@ -27,16 +26,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.CategoryID)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.CategoryName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Description)
-        </td>
+        </td>   
         <td>
             @Html.DisplayFor(modelItem => item.Picture)
-        </td>
-        <td>
-            @Html.ActionLink("Select", "")
         </td>
     </tr>
 }
