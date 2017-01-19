@@ -10,7 +10,7 @@
 </style>
 
 <div class="col-sm-3 col-md-2 sidebar">
-    <ul class="nav nav-sidebar">
+    <ul id="selectedLink" class="nav nav-sidebar">
         <li class="active">@Html.ActionLink("List", "Index")<span class="sr-only">(current)</span></li>
         <li>@Html.ActionLink("Create New", "Create", "Category")</li>
         <li><a id="link1" href="#">Edit</a></li>
@@ -28,6 +28,11 @@
 <script src="~/Scripts/npm.js"></script>
 
 <script>
+    $("#selectedLink li").click(function () {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+    });
+
     $("#table tr").click(function () {
         $(this).addClass('selected').siblings().removeClass('selected');
         var value = $(this).find('td:first').html();
@@ -35,7 +40,7 @@
         value = value.toString().trim();
         alert(value);
         //Index link
-
+        
         //Edit link
         var url = window.location.href.replace("Index", document.getElementById("link1").getAttribute("href")) + "/" + value;
         alert(url);
