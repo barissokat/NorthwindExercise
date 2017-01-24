@@ -77,6 +77,5 @@ C:\Users\baris\Documents\Visual Studio 2015\Projects\Git\NorthwindExercise\North
 C:\Users\baris\Documents\Visual Studio 2015\Projects\Git\NorthwindExercise\NorthwindExercise\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\baris\Documents\Visual Studio 2015\Projects\Git\NorthwindExercise\NorthwindExercise\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\baris\Documents\Visual Studio 2015\Projects\Git\NorthwindExercise\NorthwindExercise\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\baris\Documents\Visual Studio 2015\Projects\Git\NorthwindExercise\NorthwindExercise\obj\Debug\NorthwindExercise.csprojResolveAssemblyReference.cache
 C:\Users\baris\Documents\Visual Studio 2015\Projects\Git\NorthwindExercise\NorthwindExercise\obj\Debug\NorthwindExercise.dll
 C:\Users\baris\Documents\Visual Studio 2015\Projects\Git\NorthwindExercise\NorthwindExercise\obj\Debug\NorthwindExercise.pdb

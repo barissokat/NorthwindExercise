@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Admin Application</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-    <link href="~/Content/dashboard.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -23,7 +21,6 @@
                     <a class="navbar-brand" href="#">Admin</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-
                     <ul class="nav navbar-nav navbar-right">
                         <li>@Html.ActionLink("Categories", "Index", "Category")</li>
                         <li>@Html.ActionLink("Customers", "Index", "Customer")</li>
@@ -33,13 +30,10 @@
                         <li>@Html.ActionLink("Shippers", "Index", "Shipper")</li>
                         <li>@Html.ActionLink("Suppliers", "Index", "Supplier")</li>
                     </ul>
-                    <div class="navbar-form navbar-right">
-                        <asp:TextBox ID="txtSearch" class="form-control" placeholder="Search..." runat="server"></asp:TextBox>
-                    </div>
                 </div>
             </div>
         </nav>
-        <div class="container-fluid">
+        <div class="container-fluid body-content">
             <div class="row">
                 @RenderBody()
             </div>
@@ -50,8 +44,8 @@
         </div>
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
-        <script src="~/Scripts/holder.min.js"></script>
-        <script src="~/Scripts/npm.js"></script>
+        @Scripts.Render("~/bundles/datatables")
+        @Scripts.Render("~/bundles/jqueryui")
         @RenderSection("scripts", required: false)
     </form>
 </body>

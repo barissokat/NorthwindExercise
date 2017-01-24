@@ -2,20 +2,12 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<style>
-    .selected {
-        background-color: brown;
-        color: #FFF;
-    }
-</style>
-
 <div class="col-sm-3 col-md-2 sidebar">
-    <ul id="selectedLink" class="nav nav-sidebar">
-        <li class="active">@Html.ActionLink("List", "Index")<span class="sr-only">(current)</span></li>
-        <li>@Html.ActionLink("Create New", "Create", "Category")</li>
-        <li><a id="link1" href="#">Edit</a></li>
-        <li><a id="link2" href="#">Details</a></li>
-        <li><a id="link3" href="#">Delete</a></li>
+    <ul class="nav nav-sidebar">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
     </ul>
 </div>
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -24,55 +16,6 @@
 
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
-<script src="~/Scripts/holder.min.js"></script>
-<script src="~/Scripts/npm.js"></script>
-
-<script>
-    $("#selectedLink li").click(function () {
-        $(this).addClass('active');
-        $(this).siblings().removeClass('active');
-    });
-
-    $("#table tr").click(function () {
-        $(this).addClass('selected').siblings().removeClass('selected');
-        var value = $(this).find('td:first').html();
-        //add id to link
-        value = value.toString().trim();
-        alert(value);
-        //Index link
-        
-        //Edit link
-        var url = window.location.href.replace("Index", document.getElementById("link1").getAttribute("href")) + "/" + value;
-        alert(url);
-        $('#link1').click(function () {
-            alert("click method");
-            url = url.replace("#", "Edit");
-            alert(url);
-            window.location.replace(url);
-        });
-        //Details link
-        var url = window.location.href.replace("Index", document.getElementById("link2").getAttribute("href")) + "/" + value;
-        alert(url);
-        $('#link2').click(function () {
-            alert("click method");
-            url = url.replace("#", "Details");
-            alert(url);
-            window.location.replace(url);
-        });
-        //Delete link
-        var url = window.location.href.replace("Index", document.getElementById("link3").getAttribute("href")) + "/" + value;
-        alert(url);
-        $('#link3').click(function () {
-            alert("click method");
-            url = url.replace("#", "Delete");
-            alert(url);
-            window.location.replace(url);
-        });
-    });
-
-    $('.ok').on('click', function (e) {
-        alert($("#table tr.selected td:first").html());
-    });
-</script>
-
+@Scripts.Render("~/bundles/datatables")
+@Scripts.Render("~/bundles/jqueryui")
 @RenderSection("scripts", required: false)
